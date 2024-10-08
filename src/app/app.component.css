@@ -1,0 +1,6 @@
+/* Contenedor principal */
+.container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: auto; /* Centramos el contenedor */
+    padding: 0px; /* Espaciado interno */
+}

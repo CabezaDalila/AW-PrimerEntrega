@@ -1,0 +1,14 @@
+<h1>Login</h1>
+<div class="container">
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+
+        <label for="user-Name" >User Name</label>
+        <input formControlName="userName" type="text" id="user-Name">
+
+        <label for="user-email">Email</label>
+        <input formControlName="userEmail" type="email" id="user-email">
+
+        <button type="submit" class="button">Send</button>
+    </form>
+
+</div>
