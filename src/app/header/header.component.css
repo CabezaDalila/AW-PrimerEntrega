@@ -6,18 +6,15 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
   height: 60px;
 }
 
-#img-logo {
-  height: 40px;
+.img-logo {
+  height: 70px;
   width: auto;
-  object-fit: contain;
 }
 
 nav {
@@ -44,7 +41,9 @@ a:hover {
     flex-direction: column;
   }
 
-  #img-logo {
+  .img-logo {
+    height: 70px;
+    width: auto;
     margin-bottom: 10px;
   }
 

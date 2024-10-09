@@ -1,30 +1,16 @@
 
-/* You can add global styles to this file, and also import other style files */
 body {
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif; /* Fuente general */
-    line-height: 1.6; /* Espaciado entre líneas */
-    background-color: #f4f4f4; /* Color de fondo */
     color: #333; /* Color del texto */
-    margin: 20px 0; /* Margen superior e inferior */
-    padding: 0px; /* Espaciado interno */
-    background-color: #ffffff; /* Fondo blanco */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding-bottom: 60px;
+    background-color: #ffffff; /* Fondo blanco */    
 }
 
-main{
-    min-height: calc(100vh - 60px);
-}
-
-/* Contenedor principal */
-.container {
-    max-width: 1200px; /* Ancho máximo */
-    margin: auto; /* Centramos el contenedor */
-    padding: 20px; /* Espaciado interno */
-}
-/* Estilo para botones */
+h1 {
+    color: #35424a;
+    margin-bottom: 20px;
+  }
 .button {
     background-color: #35424a; /* Fondo del botón */
     color: #ffffff; /* Texto blanco */
@@ -35,7 +21,18 @@ main{
     transition: background-color 0.3s; /* Transición de color */
 }
 
-/* Efecto hover en los botones */
 .button:hover {
-    background-color: #f1c40f; /* Color de fondo al pasar el cursor */
+    background-color: #252b2e; /* Color de fondo al pasar el cursor */
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.input-container{
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
 }
