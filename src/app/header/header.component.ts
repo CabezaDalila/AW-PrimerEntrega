@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { DataUsersService } from '../data-users.service';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -9,5 +9,14 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  dataUsersService = inject(DataUsersService);
+  constructor(private router: Router) { }
+
+  logOut() {
+    console.log("Deslogueado");
+    this.dataUsersService.dataUser = undefined;
+    this.router.navigate(['/landing'])
+  }
+
   // If you need any component logic, add it here
 }
