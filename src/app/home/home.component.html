@@ -19,4 +19,31 @@
 
     <button type="submit" class="button">Obtener datos</button>
   </form>
+
 </div>
+@if(stockData && stockData.results){
+<h3>Resultados para {{ stockData.ticker }}</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Volumen </th>
+      <th>VWAP</th>
+      <th>Apertura</th>
+      <th>Cierre</th>
+      <th>Máximo</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(result of stockData.results; track result.v){
+    <tr>
+      <td>{{ result.v }}</td>
+      <td>{{ result.vw }}</td>
+      <td>{{ result.o }}</td>
+      <td>{{ result.c }}</td>
+      <td>{{ result.h }}</td>
+    </tr>
+
+    }
+  </tbody>
+</table>
+}

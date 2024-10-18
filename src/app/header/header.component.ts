@@ -15,7 +15,7 @@ export class HeaderComponent {
   logOut() {
     console.log("Deslogueado");
     this.dataUsersService.dataUser = undefined;
-    this.router.navigate(['/landing'])
+    this.router.navigate([''])
   }
 
   // If you need any component logic, add it here

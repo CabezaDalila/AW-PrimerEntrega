@@ -21,11 +21,31 @@ export class DataUsersService {
     this.dataUser = undefined;
   }
 
-  getStockData(ticker: string, startDate: string, endDate: string): Observable<any> {
+  getStockData(ticker: string, startDate: string, endDate: string): Observable<Stock[]> {
     const url = `${this.baseUrl}${ticker}/range/1/day/${startDate}/${endDate}?apiKey=${this.apiKey}`;
-    return this.http.get(url);
+    return this.http.get<Stock[]>(url);
   }// va en otro servicio
 
 
 
+}
+interface Stock {
+  "adjusted": boolean,
+  "next_url": string,
+  "queryCount": number,
+  "request_id": string,
+  "results":
+  {
+    "c": number,
+    "h": number,
+    "l": number,
+    "n": number,
+    "o": number,
+    "t": number,
+    "v": number,
+    "vw": number,
+  }[],
+  "resultsCount": number,
+  "status": string,
+  "ticker": string,
 }
