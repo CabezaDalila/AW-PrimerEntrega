@@ -2,6 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import{restClient} from '@polygon.io/client-js'
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,6 +28,8 @@ export class DataUsersService {
       const url = `${this.baseUrl}${ticker}/range/1/day/${startDate}/${endDate}?apiKey=${this.apiKey}`;
       return this.http.get(url);
   }
+
+    
 
 
    

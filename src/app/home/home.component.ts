@@ -11,9 +11,13 @@ import { DataUsersService
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  stockForm: FormGroup;
+export class HomeComponent{
+
   stockData: any;
+
+
+  stockForm: FormGroup;
+
 
   constructor(private fb: FormBuilder, private dataService: DataUsersService) {
     this.stockForm = this.fb.group({
@@ -22,6 +26,7 @@ export class HomeComponent {
       endDate: ['', Validators.required]
     });
   }
+
   getStockData() {
     if (this.stockForm.valid) {
       const { ticker, startDate, endDate } = this.stockForm.value;
@@ -39,4 +44,15 @@ export class HomeComponent {
     }
   }
 
+ 
+
+
+
+
+
+
 }
+
+
+
+
