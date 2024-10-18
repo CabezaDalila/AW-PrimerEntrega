@@ -5,8 +5,9 @@
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-    margin: 0 auto;
     max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
     background-color: #8c35e2;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -17,7 +18,6 @@
     color: white;
     margin-bottom: 20px;
     font-weight: 700;
-    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .main-content h2 {
@@ -44,4 +44,45 @@
     .main-content p {
         font-size: 1rem;
     }
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-icon i {
+    color: #4F46E5;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
 }

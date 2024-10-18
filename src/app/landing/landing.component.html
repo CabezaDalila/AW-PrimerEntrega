@@ -5,3 +5,14 @@
     <p> Estos portafolios simulan la compra y venta de activos financieros como acciones, criptomonedas, y otros
         índices bursátiles, utilizando datos en tiempo real.</p>
 </section>
+<div class="card-container">
+    @for (card of cards; track card.id){
+    <div class="card">
+        <div class="card-icon">
+            <i [class]="card.icon + ' text-2xl'"></i>
+        </div>
+        <h3 class="card-title">{{ card.title }}</h3>
+        <p class="card-description">{{ card.description }}</p>
+    </div>
+    }
+</div>
