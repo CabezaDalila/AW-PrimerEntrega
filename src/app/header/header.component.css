@@ -1,5 +1,5 @@
 .header {
-  background-color: #333;
+  background-color: black;
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -22,16 +22,21 @@ nav {
   align-items: center;
 }
 
-a {
+a,
+button {
   color: white;
+  background: transparent;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
   padding: 5px 10px;
+  cursor: pointer;
+  border: none;
 }
 
-a:hover {
-  color: #f1c40f;
+a:hover,
+button:hover {
+  color: #662268;
 }
 
 @media (max-width: 600px) {

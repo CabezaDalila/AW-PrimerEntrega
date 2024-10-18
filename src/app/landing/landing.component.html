@@ -1,4 +1,18 @@
-<p>landing works!</p>
-<p>landing works!</p>
-<p>landing works!</p>
-<p>landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works! landing works !</p>
+<section class="main-content">
+    <h1>MockVest</h1>
+    <h2>Simulador de Inversiones en Tiempo Real</h2>
+    <p>Somos una plataforma web donde los usuarios pueden crear y gestionar portafolios de inversión virtuales.</p>
+    <p> Estos portafolios simulan la compra y venta de activos financieros como acciones, criptomonedas, y otros
+        índices bursátiles, utilizando datos en tiempo real.</p>
+</section>
+<div class="card-container">
+    @for (card of cards; track card.id){
+    <div class="card">
+        <div class="card-icon">
+            <i [class]="card.icon + ' text-2xl'"></i>
+        </div>
+        <h3 class="card-title">{{ card.title }}</h3>
+        <p class="card-description">{{ card.description }}</p>
+    </div>
+    }
+</div>
