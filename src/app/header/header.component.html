@@ -6,7 +6,7 @@
   <button (click)="logOut()">Cerrar Sesion</button>
   }
   @if(!dataUsersService.dataUser){
-  <a [routerLink]="['/landing']">
+  <a [routerLink]="['']">
     <img src="assets/img/MockVest-logo-white.png" alt="MockVest Logo" class="img-logo " />
   </a>
   <a [routerLink]="['/login']">Login</a>

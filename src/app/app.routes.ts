@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {
-        path: 'landing',
+        path: '',
         component: LandingComponent,
         title: 'Landing page'
     },
