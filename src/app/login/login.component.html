@@ -1,15 +1,15 @@
 <div class="login-container">
     <h1>Login</h1>
     <form class="form-container" [formGroup]="applyForm" (submit)="submitApplication()">
-        <div class="input-container" >
-            <label for="user-Name" >User Name</label>
+        <div class="input-container">
+            <label for="user-Name">User Name</label>
             <input formControlName="userName" type="text" id="user-Name">
         </div>
         <div class="input-container">
             <label for="user-email">Email</label>
             <input formControlName="userEmail" type="email" id="user-email">
         </div>
-            <button type="submit" class="button">Send</button>
+        <button type="submit" class="button">Send</button>
     </form>
 
 </div>
