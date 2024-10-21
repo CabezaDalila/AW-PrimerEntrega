@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Crypto } from '../interfaces/crypto';
 @Injectable({
   providedIn: 'root',
 })
@@ -29,6 +30,11 @@ export class DataUsersService {
     const url = `${this.baseUrl}${ticker}/range/1/day/${startDate}/${endDate}?apiKey=${this.apiKey}`;
     return this.http.get<Stock[]>(url);
   } // va en otro servicio
+
+  getCryptoPrices(symbol: string): Observable<Crypto> {
+    const url = `${this.baseUrl}X:${symbol}/prev?apiKey=${this.apiKey}`;
+    return this.http.get<Crypto>(url);
+  }
 }
 interface Stock {
   adjusted: boolean;
