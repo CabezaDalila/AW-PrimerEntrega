@@ -55,3 +55,25 @@ h3 {
         font-size: 1.2rem;
     }
 }
+
+.crypto-prices {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #6600cc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .crypto-prices div {
+    margin-bottom: 10px;
+  }
+  
+  .crypto-prices span {
+    font-weight: bold;
+  }
+  

@@ -1,4 +1,13 @@
 <div class="stock-search-container">
+
+  <div class="crypto-prices">
+    <div>Cotización de BTC: {{cryptoPrices['BTCUSD']}}</div>
+    <div>Cotización de ETH: {{cryptoPrices['ETHUSD']}}</div>
+    <div>Cotización de SOL: {{cryptoPrices['SOLUSD']}}</div>
+  </div>
+
+
+
   <h2>Buscador de acciones</h2>
 
   <form class="form-container" [formGroup]="stockForm" (submit)="getStockData()">
@@ -27,7 +36,7 @@
   <thead>
     <tr>
       <th>Volumen </th>
-      <th>VWAP</th>
+      <th>Precio promedio por volumen</th>
       <th>Apertura</th>
       <th>Cierre</th>
       <th>Máximo</th>
@@ -47,3 +56,6 @@
   </tbody>
 </table>
 }
+
+
+
